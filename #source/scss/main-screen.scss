@@ -1,0 +1,59 @@
+.main-screen {
+    flex: 1 0 100%; // maximize minimize default size
+    position: relative;
+    background-color: #0F4A82;
+    &__title {
+        position: absolute;
+        top: 35%;
+        font-size: 64px;
+        line-height: 1.1;
+        //font-weight: 500;
+        color: #FFFFFF;
+        width: 100%;
+        text-align: center;
+        z-index: 2;
+        span {
+            transition: 200ms;
+            background-color: #2C7BC6;
+            box-shadow: inset 3px 4px 5px rgba(0, 0, 0, 0.2);
+            padding: 0px 60px 3px 60px;
+            font-size: 62px;
+            line-height: 2;
+            border-radius: 70px;
+            &:hover {
+                transition: 300ms;
+                cursor: pointer;
+                background-color: #9551bd;
+            }
+            &:active {
+                transition: 100ms;
+                background-color: #0F4A82;
+            }
+        }
+    }
+    &__circle {
+        background-image: linear-gradient(to bottom right, #6EC3D6 , #64146b);
+        opacity: 0.2;
+        position: absolute;
+        &_large {
+            top: 18%;
+            left: 11%;
+            width: 360px;
+            height: 360px;
+        }
+        &_middle {
+            top: 67%;
+            left: 56%;
+            width: 180px;
+            height: 180px;
+        }
+        &_small {
+            top: 10%;
+            left: 73%;
+            width: 120px;
+            height: 120px;
+        }
+        border-radius: 50%;
+        z-index: 1;
+    }
+}

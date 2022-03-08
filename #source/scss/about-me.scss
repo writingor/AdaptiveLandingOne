@@ -1,0 +1,45 @@
+.about-me {
+    flex: 1 0 100%; // maximize minimize default size
+    position: relative;
+    background-color: #4a96dd;
+    //background-image: linear-gradient(to bottom, #CD8B5B, #CD8B5B, #438FD8);
+    &__line-1 {
+        position: absolute;
+        width: 100%;
+        top: -77px;
+        z-index: 1;
+    }
+    &__line-2 {
+        position: absolute;
+        width: 100%;
+        top: 97%;
+        z-index: 1;
+    }
+    &__cloud {
+        @include flexbox();
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 17%;
+        left: 24%;
+        z-index: 2;
+        p {
+            width: 90%;
+            position: absolute;
+            text-align: center;
+            font-size: 40px;
+            font-weight: 500;
+            color: #0F4A82;
+            z-index: 3;
+        }
+    }
+    &__photo-box {
+        transition: 150ms;
+        position: absolute;
+        width: 420px;
+        height: 420px;
+        border-radius: 50%;
+        left: 52%;
+        top: 46%;
+    }
+}

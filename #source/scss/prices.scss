@@ -1,0 +1,55 @@
+
+.prices {
+    @include flexbox();
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 100%; // maximize minimize default size
+    position: relative;
+    background-image: linear-gradient(to bottom, #4a96dd, #3683ca);
+    color: #FFFFFF;
+    &__form {
+        @include flexbox();
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 60px 56px 70px 56px;
+        background-image: linear-gradient(to bottom, #4a96dd, #3683ca);
+        border-radius: 15px;
+        box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.25);
+        h2 {
+            font-size: 47px;
+            margin-bottom: 30px;
+            text-align: center;
+            span {
+                font-size: 68px;
+            }
+        }
+        button {
+            font-size: 38px;
+            padding: 8px 44px 10px 44px;
+            box-shadow: inset 3px 4px 5px rgba(0, 0, 0, 0.2);
+            border-radius: 40px;
+            color: #FFFFFF;
+            margin-bottom: 34px;
+        }
+        ul {
+            li {
+                font-size: 40px;
+                list-style-type: disc; // thumbs up sign "✓"
+                margin-bottom: 11px;
+            }
+        }
+        &_standart {
+            margin-right: 120px;
+            button {
+                background: #2C7BC6;
+            }
+        }
+
+        &_premium {
+            button {
+                background: #0F4A82;
+            }
+        }
+    }
+}

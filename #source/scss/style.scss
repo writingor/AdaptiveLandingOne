@@ -55,8 +55,7 @@ $minWidth: 320px;
 @import "prices.scss";
 
 /* contacts */
-.contacts {
-    flex: 1 0 100%; // maximize minimize default size
-    position: relative;
-    background-color: #FFFFFF;
-}
+@import "contacts.scss";
+
+/* footer */
+@import "footer.scss";

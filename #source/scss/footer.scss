@@ -1,0 +1,12 @@
+.footer {
+    text-align: center;
+    position: relative;
+    top: -70px;
+    width: 100%;
+    z-index: 1;
+    &__copyright {
+        text-align: center;
+        font-size: 22px;
+        color: #4a96dd;
+    }
+}

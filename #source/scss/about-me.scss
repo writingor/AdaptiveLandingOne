@@ -23,6 +23,13 @@
         top: 17%;
         left: 24%;
         z-index: 2;
+        transform: translateY(50%);
+        opacity: 0;
+        &.element-show {
+            transition: all 1s;
+            transform: translateY(0%);
+            opacity: 1;
+        }
         p {
             width: 90%;
             position: absolute;
@@ -41,5 +48,12 @@
         border-radius: 50%;
         left: 52%;
         top: 46%;
+        transform: translateX(100%);
+        opacity: 0;
+        &.element-show {
+            transition: all 1s;
+            transform: translateX(0%);
+            opacity: 1;
+        }
     }
 }

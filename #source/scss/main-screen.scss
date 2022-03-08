@@ -12,22 +12,30 @@
         width: 100%;
         text-align: center;
         z-index: 2;
-        span {
+        a {
             transition: 200ms;
             background-color: #2C7BC6;
-            box-shadow: inset 3px 4px 5px rgba(0, 0, 0, 0.2);
-            padding: 0px 60px 3px 60px;
+            box-shadow: inset 0 0 5px #5c97ce;
+            color: #FFFFFF;
+            padding: 0px 60px 4px 60px;
             font-size: 62px;
             line-height: 2;
             border-radius: 70px;
+            @keyframes glowing {
+                0% { background-color: #2C7BC6; box-shadow: inset 0 0 5px #5c97ce; }
+                50% { background-color: #0F4A82; box-shadow: inset 0 0 5px #0f3961; }
+                100% { background-color: #2C7BC6; box-shadow: inset 0 0 5px #5c97ce; }
+            }
+            animation: glowing 1300ms 2;
             &:hover {
                 transition: 300ms;
                 cursor: pointer;
-                background-color: #9551bd;
+                background-color: #5f9ad1;
             }
             &:active {
                 transition: 100ms;
-                background-color: #0F4A82;
+                background-color: #14518a;
+                box-shadow: inset 3px 4px 5px rgba(0, 0, 0, 0.2);
             }
         }
     }

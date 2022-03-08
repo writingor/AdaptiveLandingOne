@@ -1,0 +1,51 @@
+.contacts {
+    flex: 1 0 100%; // maximize minimize default size
+    @include flexbox();
+    flex-direction: column;
+    position: relative;
+    background-color: #e7f3ff;
+    align-items: center;
+    padding-top: 160px;
+    &__title {
+        text-align: center;
+        font-size: 44px;
+        color: #0F4A82;
+        margin-bottom: 70px;
+    }
+
+    &__contact {
+    }
+}
+.contact {
+    @include flexbox();
+    transition: 70ms;
+    align-items: center;
+    background-image: linear-gradient(to bottom, #FFFFFF, #e2f0ff);
+    box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.14);
+    border-radius: 15px;
+    width: 380px;
+    padding: 5px 22px;
+    margin-bottom: 20px;
+    transform: scale(0.1);
+    &.element-show {
+        transition: all 700ms;
+        transform: scale(1);
+    }
+    object {
+        margin-right: 11px;
+    }
+    p {
+        font-size: 32px;
+        color: #0F4A82;
+    }
+    &:hover {
+        transition: 100ms;
+        transform: scale(1.02);
+    }
+    &:active {
+        transition: 50ms;
+        transform: scale(0.9);
+        box-shadow: inset 1px 3px 3px rgba(0, 0, 0, 0.14);
+        background-image: linear-gradient(to bottom, #e2f0ff, #dcebfd);
+    }
+}

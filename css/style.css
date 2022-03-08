@@ -251,6 +251,15 @@ h1, h2, h3, h4, h5, h6 {
     -ms-transform: translateY(50%);
     transform: translateY(50%);
     opacity: 0; }
+    @media screen and (max-width: 1700px) {
+      .about-me__cloud {
+        left: 19%; } }
+    @media screen and (max-width: 1500px) {
+      .about-me__cloud {
+        left: 14%; } }
+    @media screen and (max-width: 1300px) {
+      .about-me__cloud {
+        left: 10%; } }
     .about-me__cloud.element-show {
       -webkit-transition: all 1s;
       -o-transition: all 1s;

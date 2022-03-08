@@ -25,6 +25,15 @@
         z-index: 2;
         transform: translateY(50%);
         opacity: 0;
+        @media screen and (max-width: 1700px) {
+            left: 19%;
+        }
+        @media screen and (max-width: 1500px) {
+            left: 14%;
+        }
+        @media screen and (max-width: 1300px) {
+            left: 10%;
+        }
         &.element-show {
             transition: all 1s;
             transform: translateY(0%);

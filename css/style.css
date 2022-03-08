@@ -63,6 +63,29 @@ h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
   font-weight: inherit; }
 
+/* ui (js styles) */
+/* imageAsBackground */
+.imageAsBackground {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+  .imageAsBackground img {
+    display: none; }
+
+/* slick-slider */
+.slick-slider {
+  position: relative; }
+  .slick-slider .slick-track {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 0; }
+  .slick-slider .slick-list {
+    overflow: hidden; }
+
+/* */
 /* wrapper */
 .wrapper {
   overflow: hidden;
@@ -75,3 +98,141 @@ h1, h2, h3, h4, h5, h6 {
 
 /* */
 /* do new style */
+/* common */
+.page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+/* main-screen */
+.main-screen {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 100%;
+  flex: 1 0 100%;
+  position: relative;
+  background-color: #0F4A82; }
+  .main-screen__title {
+    position: absolute;
+    top: 35%;
+    font-size: 68px;
+    line-height: 1.1;
+    color: #FFFFFF;
+    width: 100%;
+    text-align: center;
+    z-index: 2; }
+    .main-screen__title span {
+      -webkit-transition: 200ms;
+      -o-transition: 200ms;
+      transition: 200ms;
+      background-color: #2C7BC6;
+      -webkit-box-shadow: inset 3px 4px 5px rgba(0, 0, 0, 0.2);
+      box-shadow: inset 3px 4px 5px rgba(0, 0, 0, 0.2);
+      padding: 0px 60px 3px 60px;
+      line-height: 1.9;
+      border-radius: 70px; }
+      .main-screen__title span:hover {
+        -webkit-transition: 300ms;
+        -o-transition: 300ms;
+        transition: 300ms;
+        cursor: pointer;
+        background-color: #7d479c; }
+      .main-screen__title span:active {
+        -webkit-transition: 100ms;
+        -o-transition: 100ms;
+        transition: 100ms;
+        background-color: #0F4A82; }
+  .main-screen__circle {
+    background-image: -webkit-gradient(linear, left top, right bottom, from(#6EC3D6), to(#64146b));
+    background-image: -webkit-linear-gradient(top left, #6EC3D6, #64146b);
+    background-image: -o-linear-gradient(top left, #6EC3D6, #64146b);
+    background-image: linear-gradient(to bottom right, #6EC3D6, #64146b);
+    opacity: 0.2;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1; }
+    .main-screen__circle_large {
+      top: 18%;
+      left: 9%;
+      width: 360px;
+      height: 360px; }
+    .main-screen__circle_middle {
+      top: 67%;
+      left: 56%;
+      width: 180px;
+      height: 180px; }
+    .main-screen__circle_small {
+      top: 10%;
+      left: 73%;
+      width: 120px;
+      height: 120px; }
+
+/* about-me */
+.about-me {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 100%;
+  flex: 1 0 100%;
+  position: relative;
+  background-color: #CD8B5B; }
+  .about-me__cloud {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    z-index: 2; }
+    .about-me__cloud p {
+      width: 90%;
+      position: absolute;
+      text-align: center;
+      font-size: 40px;
+      font-weight: 500;
+      color: #0F4A82;
+      z-index: 3; }
+  .about-me__photo-box {
+    -webkit-transition: 150ms;
+    -o-transition: 150ms;
+    transition: 150ms;
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    left: 52%;
+    top: 39%; }
+
+/* prices */
+.prices {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 100%;
+  flex: 1 0 100%;
+  position: relative;
+  background-color: #438FD8; }
+
+/* contacts */
+.contacts {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 100%;
+  flex: 1 0 100%;
+  position: relative;
+  background-color: #FFFFFF; }

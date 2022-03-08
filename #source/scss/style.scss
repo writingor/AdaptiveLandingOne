@@ -25,12 +25,18 @@ $minWidth: 320px;
 @import "null.scss";
 
 
+/* ui (js styles) */
+
+@import "ui.scss";
+
+
 /* wrapper */
 
 .wrapper {
     overflow: hidden;
     min-height: 100%;
 }
+
 
 /* container */
 
@@ -39,8 +45,142 @@ $minWidth: 320px;
     padding: 0px 15px;
 }
 
+
 /* */
 
 
 
+
 /* do new style */
+
+
+
+/* common */
+
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    @include flexbox();
+    flex-direction: column;
+}
+
+
+/* main-screen */
+
+.main-screen {
+    flex: 1 0 100%; // maximize minimize default size
+    position: relative;
+    background-color: #0F4A82;
+    &__title {
+        position: absolute;
+        top: 35%;
+        font-size: 68px;
+        line-height: 1.1;
+        //font-weight: 500;
+        color: #FFFFFF;
+        width: 100%;
+        text-align: center;
+        z-index: 2;
+        span {
+            transition: 200ms;
+            background-color: #2C7BC6;
+            box-shadow: inset 3px 4px 5px rgba(0, 0, 0, 0.2);
+            padding: 0px 60px 3px 60px;
+            line-height: 1.9;
+            border-radius: 70px;
+            &:hover {
+                transition: 300ms;
+                cursor: pointer;
+                background-color: #7d479c;
+            }
+            &:active {
+                transition: 100ms;
+                background-color: #0F4A82;
+            }
+        }
+    }
+    &__circle {
+        background-image: linear-gradient(to bottom right, #6EC3D6 , #64146b);
+        opacity: 0.2;
+        position: absolute;
+        &_large {
+            top: 18%;
+            left: 9%;
+            width: 360px;
+            height: 360px;
+        }
+        &_middle {
+            top: 67%;
+            left: 56%;
+            width: 180px;
+            height: 180px;
+        }
+        &_small {
+            top: 10%;
+            left: 73%;
+            width: 120px;
+            height: 120px;
+        }
+        border-radius: 50%;
+        z-index: 1;
+    }
+}
+
+
+/* about-me */
+
+.about-me {
+    flex: 1 0 100%; // maximize minimize default size
+    position: relative;
+    background-color: #CD8B5B;
+    //background-image: linear-gradient(to bottom, #CD8B5B, #CD8B5B, #438FD8);
+    &__cloud {
+        @include flexbox();
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 10%;
+        left: 25%;
+        z-index: 2;
+        p {
+            width: 90%;
+            position: absolute;
+            text-align: center;
+            font-size: 40px;
+            font-weight: 500;
+            color: #0F4A82;
+            z-index: 3;
+        }
+    }
+    &__photo-box {
+        transition: 150ms;
+        position: absolute;
+        width: 420px;
+        height: 420px;
+        border-radius: 50%;
+        left: 52%;
+        top: 39%;
+    }
+}
+
+
+/* prices */
+
+.prices {
+    flex: 1 0 100%; // maximize minimize default size
+    position: relative;
+    background-color: #438FD8;
+    //background-image: linear-gradient(to bottom, #CD8B5B, #438FD8);
+}
+
+
+/* contacts */
+
+.contacts {
+    flex: 1 0 100%; // maximize minimize default size
+    position: relative;
+    background-color: #FFFFFF;
+}

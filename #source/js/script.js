@@ -1,3 +1,5 @@
+
+
 function imageAsBackground()
 {
     $.each($(".imageAsBackground"), function(index, val)

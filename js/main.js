@@ -1,5 +1,7 @@
 //@prepros-append script.js
 
+
+
 function imageAsBackground()
 {
     $.each($(".imageAsBackground"), function(index, val)

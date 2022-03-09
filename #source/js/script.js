@@ -49,7 +49,7 @@ function onEntry(entry) {
 }
   let options = { threshold: [0.5] };
   let observer = new IntersectionObserver(onEntry, options);
-  let elements = document.querySelectorAll('.about-me__cloud, .about-me__photo-box, .prices__form, .contact');
+  let elements = document.querySelectorAll('.about-me__cloud, .about-me__photo-box, .prices__form, .contact, .main-screen__circle');
   for (let elm of elements) {
     observer.observe(elm);
 }

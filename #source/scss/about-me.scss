@@ -10,6 +10,10 @@
     @media screen and (max-width: 450px) {
         background-image: linear-gradient(to bottom, #FFFFFF, #4a96dd);
     }
+    /* height */
+    @media screen and (max-height: 400px) {
+        flex: 1 0 210%;
+    }
 
     &__cloud-image {
         width: 100%;
@@ -42,11 +46,16 @@
         }
         @media screen and (max-width: 1000px) {
             left: 0%;
+            transform: translateY(30%);
         }
         @media screen and (max-width: 450px) {
             position: relative;
             width: 100%;
             margin-bottom: 140px;
+        }
+        /* height */
+        @media screen and (max-height: 400px) {
+            top: 11%;
         }
         &.element-show {
             transition: all 1s;

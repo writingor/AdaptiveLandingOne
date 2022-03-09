@@ -56,9 +56,17 @@ $minWidth: 320px;
 
 .line-1 {  
     top: 97%;
+    /* height */
+    @media screen and (max-height: 400px) {
+        top: 92%;
+    }
 }
 .line-2 {
     top: 200%;
+    /* height */
+    @media screen and (max-height: 400px) {
+        top: 311%;
+    }
 }
 
 /* main-screen */

@@ -2,16 +2,26 @@
     flex: 1 0 100%; // maximize minimize default size
     position: relative;
     background-color: #0F4A82;
+    overflow: hidden;
     &__title {
         position: absolute;
         top: 35%;
         font-size: 64px;
         line-height: 1.1;
-        //font-weight: 500;
+        padding: 15px;
         color: #FFFFFF;
         width: 100%;
         text-align: center;
         z-index: 2;
+        @media screen and (max-width: 1350px) {
+            font-size: 52px;  
+        }
+        @media screen and (max-width: 1100px) {
+            font-size: 46px;  
+        }
+        @media screen and (max-width: 780px) {
+            font-size: 36px;  
+        }
         a {
             transition: 200ms;
             background-color: #2C7BC6;
@@ -25,6 +35,16 @@
                 0% { background-color: #2C7BC6; box-shadow: inset 0 0 5px #5c97ce; }
                 50% { background-color: #0F4A82; box-shadow: inset 0 0 5px #0f3961; }
                 100% { background-color: #2C7BC6; box-shadow: inset 0 0 5px #5c97ce; }
+            }
+            @media screen and (max-width: 1350px) {
+                font-size: 50px;  
+            }
+            @media screen and (max-width: 1100px) {
+                font-size: 44px;  
+                padding: 0px 40px 3px 40px;
+            }
+            @media screen and (max-width: 780px) {
+                font-size: 34px;  
             }
             animation: glowing 1300ms 2;
             &:hover {
@@ -41,23 +61,29 @@
     }
     &__circle {
         background-image: linear-gradient(to bottom right, #6EC3D6 , #64146b);
-        opacity: 0.2;
         position: absolute;
+        opacity: 0;
+        transform: scale(0.1);
+        &.element-show {
+            transition: all 700ms;
+            opacity: 0.2;
+            transform: scale(1);
+        }
         &_large {
-            top: 18%;
-            left: 11%;
+            top: 23%;
+            left: 9%;
             width: 360px;
             height: 360px;
         }
         &_middle {
             top: 67%;
-            left: 56%;
+            left: 52%;
             width: 180px;
             height: 180px;
         }
         &_small {
             top: 10%;
-            left: 73%;
+            left: 70%;
             width: 120px;
             height: 120px;
         }

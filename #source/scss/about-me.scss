@@ -1,19 +1,21 @@
 .about-me {
+    @include flexbox();
+    align-items: center;
+    flex-direction: column;
     flex: 1 0 100%; // maximize minimize default size
     position: relative;
     background-color: #4a96dd;
-    //background-image: linear-gradient(to bottom, #CD8B5B, #CD8B5B, #438FD8);
-    &__line-1 {
-        position: absolute;
-        width: 100%;
-        top: -77px;
-        z-index: 1;
+    overflow: hidden;
+    padding: 60px 0px;
+    @media screen and (max-width: 450px) {
+        background-image: linear-gradient(to bottom, #FFFFFF, #4a96dd);
     }
-    &__line-2 {
-        position: absolute;
+
+    &__cloud-image {
         width: 100%;
-        top: 97%;
-        z-index: 1;
+        @media screen and (max-width: 450px) {
+            display: none;
+        }
     }
     &__cloud {
         @include flexbox();
@@ -23,8 +25,9 @@
         top: 17%;
         left: 24%;
         z-index: 2;
-        transform: translateY(50%);
+        transform: translateY(47%);
         opacity: 0;
+        padding: 15px;
         @media screen and (max-width: 1700px) {
             left: 19%;
         }
@@ -32,7 +35,18 @@
             left: 14%;
         }
         @media screen and (max-width: 1300px) {
-            left: 10%;
+            left: 8%;
+        }
+        @media screen and (max-width: 1140px) {
+            left: 3%;
+        }
+        @media screen and (max-width: 1000px) {
+            left: 0%;
+        }
+        @media screen and (max-width: 450px) {
+            position: relative;
+            width: 100%;
+            margin-bottom: 140px;
         }
         &.element-show {
             transition: all 1s;
@@ -47,9 +61,17 @@
             font-weight: 500;
             color: #0F4A82;
             z-index: 3;
+            @media screen and (max-width: 1000px) {
+                font-size: 32px;
+            }
+            @media screen and (max-width: 600px) {
+                width: 86%;
+                font-size: 26px;
+            }
         }
     }
     &__photo-box {
+        flex: 0 0 100%;
         transition: 150ms;
         position: absolute;
         width: 420px;
@@ -57,8 +79,19 @@
         border-radius: 50%;
         left: 52%;
         top: 46%;
-        transform: translateX(100%);
+        transform: translateX(30%);
         opacity: 0;
+        @media screen and (max-width: 1000px) {
+            transform: translateX(0%);
+        }
+        @media screen and (max-width: 450px) {
+            flex: 0 0 auto;
+            left: 0;
+            top: auto;
+            border-radius: 15px;
+            position: relative;
+            width: 91%;
+        }
         &.element-show {
             transition: all 1s;
             transform: translateX(0%);
